@@ -2,12 +2,11 @@ import numpy as np #  importa o Numpy
 import random # importa o Random (usado para gerar números aleatórios)
 
 lista = [random.randint(0, 100) for _ in range(9)] # gera uma lista aleatória de 9 números entre 0 e 100
+matriz = np.array(lista).reshape(3, 3) # transforma a lista em uma matrix 3 x 3
 
 def calculate(lista): # cria uma função
     if len(lista) != 9: # verifica se a lista tem 9 elementos
         raise ValueError('A lista deve conter nove números') # dá erro caso a lista não tenha 9 números
-
-    matriz = np.array(lista).reshape(3, 3) # transforma a lista em uma matrix 3 x 3
 
     calculations = { # cria o dicionário
         'mean': [ # média dos valores da matriz
@@ -46,5 +45,7 @@ def calculate(lista): # cria uma função
 
 resultado = calculate(lista) # coloca o resultado da função em uma variável
 
+print (f'Matriz gerada: {matriz}') # printa a matriz gerada
+
 for chave, valor in resultado.items():
-    print(f"{chave}:\n{valor}\n") # printa o dicionário separado por linhas
+    print(f'{chave}:\n{valor}\n') # printa o dicionário separado por linhas
