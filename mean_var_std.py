@@ -45,7 +45,7 @@ def calculate(lista): # cria uma função
 
 resultado = calculate(lista) # coloca o resultado da função em uma variável
 
-print (f'Matriz gerada: {matriz}') # printa a matriz gerada
+print (f'Matriz gerada: {matriz}\n') # printa a matriz gerada
 
 for chave, valor in resultado.items():
     print(f'{chave}:\n{valor}\n') # printa o dicionário separado por linhas
